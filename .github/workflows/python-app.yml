@@ -26,7 +26,7 @@ jobs:
       run: |
         pip install pytest coverage
         pytest test.py --doctest-modules
-        coverage run -m pytest
+        coverage run -m pytest test.py --doctest-modules
 
         
 
