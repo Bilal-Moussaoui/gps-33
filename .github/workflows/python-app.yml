@@ -25,7 +25,6 @@ jobs:
     - name: Test with pytest and show coverage
       run: |
         pip install pytest coverage
-        pytest test.py --doctest-modules
         coverage run -m pytest test.py --doctest-modules
 
         
