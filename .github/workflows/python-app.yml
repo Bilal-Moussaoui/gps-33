@@ -17,15 +17,18 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pylint coverage
+        pip install pylint 
         pip install -r requirements.txt
     - name: Analysing the code with pylint
       run: |
         pylint $(git ls-files '*.py')
-    - name: Test with pytest
+    - name: Test with pytest and show coverage
       run: |
-        pip install pytest pytest-cov
+        pip install pytest coverage
         pytest test.py --doctest-modules
+        coverage run -m pytest
+
+        
 
 
       
