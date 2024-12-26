@@ -28,8 +28,5 @@ jobs:
         coverage run -m pytest test.py --doctest-modules
         coverage report
 
-        
-
-
       
     
